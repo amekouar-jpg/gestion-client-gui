@@ -1,0 +1,73 @@
+Attempting to build GTK3 Contact Manager 
+ 
+Checking for GCC... 
+GCC found at C:\msys64\ucrt64\bin\gcc.exe 
+Cleaning old files... 
+Getting GTK3 flags... 
+CFLAGS: -DLIBDEFLATE_DLL -IC:/msys64/ucrt64/include/gtk-3.0 -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/pango-1.0 -IC:/msys64/ucrt64/include/harfbuzz -IC:/msys64/ucrt64/include/pango-1.0 -IC:/msys64/ucrt64/include/fribidi -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/atk-1.0 -IC:/msys64/ucrt64/include/cairo -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/freetype2 -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/harfbuzz -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/pixman-1 -IC:/msys64/ucrt64/include/gdk-pixbuf-2.0 -IC:/msys64/ucrt64/include/libpng16 -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/webp -IC:/msys64/ucrt64/include -IC:/msys64/ucrt64/include/glib-2.0 -IC:/msys64/ucrt64/lib/glib-2.0/include -IC:/msys64/ucrt64/include 
+LIBS: -LC:/msys64/ucrt64/lib -lgtk-3 -lgdk-3 -lz -lgdi32 -limm32 -lshell32 -lole32 -luuid -lwinmm -ldwmapi -lsetupapi -lcfgmgr32 -lhid -lwinspool -lcomctl32 -lcomdlg32 -lpangowin32-1.0 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lintl 
+Compiling... 
+projet_gui.c:8:9: warning: 'MAX' redefined
+    8 | #define MAX 40
+      |         ^~~
+In file included from C:/msys64/ucrt64/lib/glib-2.0/include/glibconfig.h:9,
+                 from C:/msys64/ucrt64/include/glib-2.0/glib/gtypes.h:34,
+                 from C:/msys64/ucrt64/include/glib-2.0/glib/galloca.h:34,
+                 from C:/msys64/ucrt64/include/glib-2.0/glib.h:32,
+                 from C:/msys64/ucrt64/include/gtk-3.0/gdk/gdkconfig.h:8,
+                 from C:/msys64/ucrt64/include/gtk-3.0/gdk/gdk.h:30,
+                 from C:/msys64/ucrt64/include/gtk-3.0/gtk/gtk.h:30,
+                 from projet_gui.c:1:
+C:/msys64/ucrt64/include/glib-2.0/glib/gmacros.h:939:9: note: this is the location of the previous definition
+  939 | #define MAX(a, b)  (((a) > (b)) ? (a) : (b))
+      |         ^~~
+projet_gui.c: In function 'on_ajouter_clicked':
+projet_gui.c:215:36: warning: unused parameter 'widget' [-Wunused-parameter]
+  215 | void on_ajouter_clicked(GtkWidget *widget, gpointer data) {
+      |                         ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'on_modifier_clicked':
+projet_gui.c:252:37: warning: unused parameter 'widget' [-Wunused-parameter]
+  252 | void on_modifier_clicked(GtkWidget *widget, gpointer data) {
+      |                          ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'on_supprimer_clicked':
+projet_gui.c:286:38: warning: unused parameter 'widget' [-Wunused-parameter]
+  286 | void on_supprimer_clicked(GtkWidget *widget, gpointer data) {
+      |                           ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'on_rechercher_clicked':
+projet_gui.c:323:39: warning: unused parameter 'widget' [-Wunused-parameter]
+  323 | void on_rechercher_clicked(GtkWidget *widget, gpointer data) {
+      |                            ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'on_reset_search_clicked':
+projet_gui.c:382:41: warning: unused parameter 'widget' [-Wunused-parameter]
+  382 | void on_reset_search_clicked(GtkWidget *widget, gpointer data) {
+      |                              ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'on_save_bin_clicked':
+projet_gui.c:389:37: warning: unused parameter 'widget' [-Wunused-parameter]
+  389 | void on_save_bin_clicked(GtkWidget *widget, gpointer data) {
+      |                          ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'on_load_bin_clicked':
+projet_gui.c:395:37: warning: unused parameter 'widget' [-Wunused-parameter]
+  395 | void on_load_bin_clicked(GtkWidget *widget, gpointer data) {
+      |                          ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'on_save_txt_clicked':
+projet_gui.c:403:37: warning: unused parameter 'widget' [-Wunused-parameter]
+  403 | void on_save_txt_clicked(GtkWidget *widget, gpointer data) {
+      |                          ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'on_load_txt_clicked':
+projet_gui.c:409:37: warning: unused parameter 'widget' [-Wunused-parameter]
+  409 | void on_load_txt_clicked(GtkWidget *widget, gpointer data) {
+      |                          ~~~~~~~~~~~^~~~~~
+projet_gui.c: In function 'main':
+projet_gui.c:741:5: warning: 'G_APPLICATION_FLAGS_NONE' is deprecated: Use 'G_APPLICATION_DEFAULT_FLAGS' instead [-Wdeprecated-declarations]
+  741 |     );
+      |     ^
+In file included from C:/msys64/ucrt64/include/glib-2.0/gio/giotypes.h:30,
+                 from C:/msys64/ucrt64/include/glib-2.0/gio/gio.h:28,
+                 from C:/msys64/ucrt64/include/gtk-3.0/gdk/gdkapplaunchcontext.h:28,
+                 from C:/msys64/ucrt64/include/gtk-3.0/gdk/gdk.h:32:
+C:/msys64/ucrt64/include/glib-2.0/gio/gioenums.h:1563:3: note: declared here
+ 1563 |   G_APPLICATION_FLAGS_NONE GIO_DEPRECATED_ENUMERATOR_IN_2_74_FOR(G_APPLICATION_DEFAULT_FLAGS),
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~
+Linking... 
+Build successful! 
+Running application... 
